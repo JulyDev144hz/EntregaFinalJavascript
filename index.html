@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrega Final Javascript</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+
+<body>
+
+    <main>
+        <div class="loginPage" id="loginPage">
+
+            <div class="loginBox">
+                <img src="profile.png" alt="profile" id="profileImgLogin">
+
+                <input type="text" name="" placeholder="Usuario" id="usernameLogin" autocomplete="off">
+
+                <button id="buttonLogear">Ingresar</button>
+            </div>
+        </div>
+
+        <div class="menu">
+
+
+            <div class="addStudent">
+                <h4>Agregar Alumno</h4>
+                <input type="text" placeholder="Nombre" id="nombreNewStudent">
+                <input type="number" placeholder="Trim 1" id="trim1NewStudent">
+                <input type="number" placeholder="Trim 2" id="trim2NewStudent">
+                <input type="number" placeholder="Trim 3" id="trim3NewStudent">
+
+                <button id="buttonAddStudent">Agregar Alumno</button>
+
+            </div>
+        </div>
+
+        <div class="mainPage" id="mainPage">
+            <nav class="mainNav">
+                <ul>
+                    <li id="addStudentBtn">Agregar Alumno</li>
+                    <li>Remover Alumno</li>
+                    <li>Editar Alumno</li>
+                    <li id="showCalculatorButton">Mostrar/Ocultar Calculadora</li>
+                </ul>
+                <div class="userNav">
+                    <img src="profile.png" alt="" id="profileImgNav">
+                    <span id="usernameNav">Julian Ippolito</span>
+
+                    <div class="dropdownImgs" id="dropdownImages" style="display: none">
+                    </div>
+                </div>
+            </nav>
+
+            <table id="studentsTable" class="studentsTable">
+
+                <tr>
+                    <th>ID</th>
+                    <th>NOMBRE</th>
+                    <th>Trim 1</th>
+                    <th>Trim 2</th>
+                    <th>Trim 3</th>
+                    <th>PROMEDIO</th>
+                    <th>ESTADO</th>
+                </tr>
+                <tr>
+                    <td>ID</td>
+                    <td>NOMBRE</td>
+                    <td>Trim 1</td>
+                    <td>Trim 2</td>
+                    <td>Trim 3</td>
+                    <td>PROMEDIO</td>
+                    <td>ESTADO</td>
+                </tr>
+            </table>
+
+        </div>
+
+
+    </main>
+
+
+
+    <div class="calculator hideCalculator" id="calculator">
+        <div class="draggable" id="draggable"></div>
+
+        <input type="text" id="calculatorInput">
+
+        <button class="calculatorButton">CE</button>
+        <button class="calculatorButton">C</button>
+        <button class="calculatorButton">D</button>
+        <button class="calculatorButton calculatorOperator">/</button>
+        <button class="calculatorButton calculatorNumber">7</button>
+        <button class="calculatorButton calculatorNumber">8</button>
+        <button class="calculatorButton calculatorNumber">9</button>
+        <button class="calculatorButton calculatorOperator">*</button>
+        <button class="calculatorButton calculatorNumber">4</button>
+        <button class="calculatorButton calculatorNumber">5</button>
+        <button class="calculatorButton calculatorNumber">6</button>
+        <button class="calculatorButton calculatorOperator">-</button>
+        <button class="calculatorButton calculatorNumber">1</button>
+        <button class="calculatorButton calculatorNumber">2</button>
+        <button class="calculatorButton calculatorNumber">3</button>
+        <button class="calculatorButton calculatorOperator">+</button>
+        <button class="calculatorButton span2  calculatorNumber">0</button>
+        <button class="calculatorButton">.</button>
+        <button class="calculatorButton calculatorOperator">=</button>
+    </div>
+</body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="main.js"></script>
+
+</html>

@@ -1,0 +1,355 @@
+.mainPage {
+  animation: appearMainPage 2s forwards;
+  margin-left: 5vw;
+  height: 100vh;
+  width: 90vw;
+  background: rgba(77, 77, 77, 0.2862745098);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  box-shadow: 0 0 5px #000981;
+  border-left: 1px solid #000981;
+  border-right: 1px solid #000981;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.mainPage .studentsTable {
+  background: rgba(122, 122, 122, 0.274);
+  border: 2px solid white;
+  border-radius: 5px;
+  text-align: center;
+  margin: 20px;
+  width: 90%;
+}
+.mainPage .mainNav {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.164);
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+.mainPage .mainNav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+.mainPage .mainNav ul li {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 64px;
+}
+.mainPage .mainNav ul li:hover {
+  filter: brightness(1.2);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.1s;
+  transform: scale(1.1);
+}
+.mainPage .mainNav ul li:nth-child(1) {
+  color: #010101;
+  background: rgb(1, 221, 100);
+}
+.mainPage .mainNav ul li:nth-child(2) {
+  color: #fdfdfd;
+  background: rgb(201, 41, 1);
+}
+.mainPage .mainNav ul li:nth-child(3) {
+  color: #fdfdfd;
+  background: rgb(0, 153, 255);
+}
+.mainPage .mainNav ul li:nth-child(4) {
+  color: #fdfdfd;
+  background: rgb(72, 43, 238);
+}
+.mainPage .mainNav .userNav {
+  display: flex;
+  position: relative;
+  justify-content: left;
+  align-items: center;
+}
+.mainPage .mainNav .userNav #profileImgNav {
+  height: 64px;
+  cursor: pointer;
+}
+.mainPage .mainNav .userNav #usernameNav {
+  background: white;
+  text-align: center;
+  width: 100%;
+  line-height: 64px;
+}
+.mainPage .mainNav .userNav .dropdownImgs {
+  animation: dropdownImgs 0.2s forwards linear;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.404);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2941176471);
+  height: 100px;
+  width: 300px;
+  transform: translateX(-40%);
+  top: 100%;
+  display: flex;
+  overflow-x: scroll;
+  gap: 5px;
+  padding: 5px;
+}
+.mainPage .mainNav .userNav .dropdownImgs::-webkit-scrollbar {
+  height: 10px;
+}
+.mainPage .mainNav .userNav .dropdownImgs::-webkit-scrollbar-thumb {
+  background: white;
+}
+.mainPage .mainNav .userNav .dropdownImgs img {
+  height: 80px;
+  width: 80px;
+  background: #fff;
+  box-shadow: 0 0 5px;
+}
+.mainPage .mainNav .userNav .dropdownImgs img:hover {
+  position: relative;
+  transform: scale(1.1);
+  transition: transform 0.1s;
+  cursor: pointer;
+}
+
+.loginPage {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.loginPage .loginBox {
+  border: 2px solid rgb(4, 103, 252);
+  background: rgba(255, 255, 255, 0.726);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  box-shadow: 0 0 5px #000;
+  border-radius: 2px;
+  gap: 7px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 64px auto;
+  -ms-grid-row-span: 1fr 1fr;
+}
+.loginPage .loginBox input[type=text] {
+  font-size: 20px;
+  padding: 2px;
+  border: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0.1098039216);
+  border-radius: 2px;
+  padding: 5px;
+}
+.loginPage .loginBox button {
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background: rgba(0, 76, 241, 0.5019607843);
+  color: white;
+  text-shadow: 0 0 5px #000;
+  padding: 2px;
+  cursor: pointer;
+}
+.loginPage .loginBox img {
+  width: 64px;
+  grid-row: span 2;
+  border-radius: 50%;
+  box-shadow: 0 0 3px #000;
+}
+
+.calculator {
+  position: absolute;
+  top: 35vh;
+  left: 45vw;
+  animation: appearCalculator 1s forwards;
+  width: 300px;
+  height: 400px;
+  background: rgba(0, 0, 0, 0.829);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: 5px;
+  box-shadow: 0 0 5px #000, inset 0 10px 10px 5px rgba(255, 255, 255, 0.137254902);
+  display: grid;
+  padding: 25px 0 0 0;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 1px;
+}
+.calculator.hideCalculator {
+  display: none !important;
+}
+.calculator .draggable {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 25px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: move;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  background: transparent;
+}
+.calculator .draggable:hover {
+  background: rgba(255, 255, 255, 0.0549019608);
+}
+.calculator input[type=text] {
+  width: -moz-fit-content;
+  width: fit-content;
+  grid-column: span 4;
+  margin: 5px;
+  width: auto;
+  font-size: 40px;
+  height: 64px;
+  padding: 0 5px 0 0;
+  text-align: right;
+  background: transparent;
+  outline: none;
+  border: none;
+  color: white;
+  text-shadow: 0 0 2px #ffffff;
+}
+.calculator .calculatorButton {
+  background: rgb(56, 56, 56);
+  color: white;
+  font-size: 1.7rem;
+  border: none;
+  outline: none;
+}
+.calculator .calculatorButton.span2 {
+  grid-column: span 2;
+}
+.calculator .calculatorButton.calculatorNumber {
+  background: #000;
+}
+.calculator .calculatorButton:hover {
+  background: #5e5e5e;
+}
+.calculator .calculatorButton.calculatorOperator:hover {
+  background: #38006d;
+}
+
+.menu {
+  position: absolute;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.3098039216);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+.menu .addStudent {
+  padding: 20px;
+  background: #ffffff;
+  border: 2px solid #00ce22;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.menu .addStudent h4 {
+  text-align: center;
+  font-size: 1.4rem;
+}
+.menu .addStudent input {
+  font-size: 20px;
+  outline: none;
+  border: none;
+  background: #666666;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+.menu .addStudent input::-moz-placeholder {
+  color: white;
+}
+.menu .addStudent input::placeholder {
+  color: white;
+}
+.menu .addStudent input::-webkit-outer-spin-button, .menu .addStudent input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.menu .addStudent button {
+  font-size: 1.5rem;
+  padding: 10px;
+  border: none;
+  box-shadow: 0 0 5px #000;
+  background: #009670;
+  color: white;
+}
+.menu .addStudent button:hover {
+  position: relative;
+  transform: scale(1.05);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  overflow: hidden;
+  position: relative;
+  background: url("wallpaper.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+@keyframes loginDisappear {
+  0% {
+    transform: rotateZ(0deg) translate(0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: rotateZ(0deg) translate(0, 5vh);
+  }
+}
+@keyframes appearMainPage {
+  0% {
+    opacity: 0;
+    position: relative;
+    transform: scale(0.8) rotateZ(-20deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes appearCalculator {
+  0% {
+    opacity: 0.2;
+    transform: scale(0.1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes dropdownImgs {
+  0% {
+    opacity: 0;
+    transform: translate(-40%, -100%);
+  }
+  100% {
+    transform: translate(-40%, 0);
+  }
+}/*# sourceMappingURL=styles.css.map */

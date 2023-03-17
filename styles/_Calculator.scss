@@ -1,0 +1,86 @@
+.calculator {
+
+    // OCULTO PARA CENTRARME EN LOGIN
+    &.hideCalculator{
+        display: none !important;
+    }
+
+    position: absolute;
+    top: 35vh;
+    left: 45vw;
+    animation: appearCalculator 1s forwards;
+
+
+    width: 300px;
+    height: 400px;
+    background: rgba(0, 0, 0, 0.829);
+    backdrop-filter: blur(4px);
+    border-radius: 5px;
+    box-shadow: 0 0 5px #000, inset 0 10px 10px 5px #ffffff23;
+    ;
+
+    .draggable {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 25px;
+        user-select: none;
+        cursor: move;
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+        background: transparent;
+
+
+        &:hover {
+            background: #ffffff0e;
+        }
+    }
+
+    display: grid;
+    padding: 25px 0 0 0;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 1px;
+
+    input[type="text"] {
+        width: fit-content;
+        grid-column: span 4;
+        margin: 5px;
+        width: auto;
+        font-size: 40px;
+        height: 64px;
+        padding: 0 5px 0 0;
+        text-align: right;
+        background: transparent;
+        outline: none;
+        border: none;
+        color: white;
+        text-shadow: 0 0 2px #ffffff;
+    }
+
+    .calculatorButton {
+        background: rgb(56, 56, 56);
+        color: white;
+        font-size: 1.7rem;
+        border: none;
+        outline: none;
+
+        &.span2 {
+            grid-column: span 2;
+        }
+
+        &.calculatorNumber {
+            background: #000;
+        }
+
+        &:hover {
+            background: #5e5e5e;
+        }
+
+        &.calculatorOperator:hover {
+            background: #38006d;
+        }
+
+    }
+}
